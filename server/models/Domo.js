@@ -23,13 +23,13 @@ const DomoSchema = new mongoose.Schema({
   createdDate: {
     type: Date,
     default: Date.now,
-  }
+  },
 });
 
 DomoSchema.statics.toAPI = (doc) => ({
   name: doc.name,
-  age: doc.age
-})
+  age: doc.age,
+});
 
 const DomoModel = mongoose.model('Domo', DomoSchema);
 module.exports = DomoModel;
